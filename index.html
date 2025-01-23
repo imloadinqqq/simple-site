@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" charset="utf-8" content="text/html">
+  <style>
+    body {
+      text-align: center;
+    }
+
+    #name {
+      font-size: 32px;
+    }
+  </style>
+  <title>ALEX DIAZ</title>
+  <script type="text/javascript">
+    // time zone formatting
+    let options = {
+      timeZone: 'US/Central',
+      hour: 'numeric',
+      minute: 'numeric',
+      second: 'numeric',
+    },
+      timeFormatter = new Intl.DateTimeFormat([], options);
+
+    // set time
+    setInterval(
+      () => {
+        document.querySelector("#time").innerText = timeFormatter.format(new Date());
+      }
+      , 1000)
+  </script>
+</head>
+
+<body>
+  <span id="name"><i><b>ALEX DIAZ</b></i></span><br><br>
+  <span id="email"><i><b>amdiaz1313@gmail.com</b></i></span><br><br>
+  <div id="picture">
+    <img
+      src="https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_3/v1643129842/lsr7org/yjd96twj6awmjl57ab2x/LFE_09092021-79591.jpg"
+      alt="lfe">
+  </div>
+  <br><br>
+  <span id="timezone">
+    <i>
+      <a href="https://24timezones.com/usa_time/mo_jackson/lees_summit.php">Time in Lees Summit</a>
+      -
+      <span id="time">0:00 PM</span>
+      <a href="https://24timezones.com/time-zone/ct">CST</a>
+    </i>
+  </span>
+  <br><br>
+
+  <span id="list">
+    <a href="about.html">about</a>
+    <a href="resume.html">resume</a>
+    <a href="https://www.linkedin.com/in/alex-diaz-1560a928a/">linkedin</a>
+    <a href="https://www.inspiringquotes.com/">quotes</a>
+
+  </span>
+</body>
+
+</html>
