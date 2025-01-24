@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>books</title>
+
+	<style>
+		td,th {
+			text-align: left;
+			padding-right: 2em;
+			padding-top: 5px;
+			padding-bottom: 5px;
+			padding-left: 5px;
+		}
+
+		#fin, #reading {
+			padding-bottom: 2em;
+		}
+	</style>
+</head>
+<body>
+	<div id="fin">
+		<table border="true" style="border: 1px;"><b>Finished 2025</b>
+			<th>Book</th>
+			<th>Author</th>
+			<tr>
+				<td>The Traveling Cat Chronicles</td>
+				<td>Hiro Arikawa</td>
+			</tr>
+			<tr>
+				<td>The Housekeeper and the Professor</td>
+				<td>Yōko Ogawa</td>
+			</tr>
+			<tr>
+				<td>The False Prince</td>
+				<td>Jennifer A. Nielsen</td>
+			</tr>
+			<tr>
+				<td>The Runaway King</td>
+				<td>Jennifer A. Nielsen</td>
+			</tr>
+		</table>
+	</div>
+	<div id="reading">
+		<table border="true" style="border: 1px;"><b>Reading 2025</b>
+			<th>Book</th>
+			<th>Author</th>
+			<tr>
+				<td>The Ruthless Elimination of Hurry</td>
+				<td>John Mark Comer</td>
+			</tr>
+			<tr>
+				<td>New York</td>
+				<td>Mark Rutherford</td>
+			</tr>
+			<tr>
+				<td>A Gentleman in Moscow</td>
+				<td>Amor Towles</td>
+			</tr>
+			<tr>
+				<td>The Runaway King</td>
+				<td>Jennifer A. Nielsen</td>
+			</tr>
+		</table>
+	</div>
+	<p id="finRes"></p>
+	<p id="readRes"></p>
+	<script>
+		window.onload = function () {
+			// get number of books for fin
+			var finTable = document.querySelector("#fin table");
+			var finCount = finTable.rows.length-1;
+
+			var readTable = document.querySelector("#reading table");
+			var readCount = readTable.rows.length-1;
+
+			document.getElementById("finRes").textContent = "books finished: " + finCount;
+			document.getElementById("readRes").textContent = "books currently reading: " + readCount;
+		}
+</script>
+</body>
+<footer>
+	<a href="https://www.goodreads.com/review/list/129864719?shelf=%23ALL%23">link to my goodreads :)</a>
+</footer>
+</html>
