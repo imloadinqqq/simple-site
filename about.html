@@ -19,6 +19,11 @@
       }
     }
 
+    body {
+      display: flex;
+      flex-direction: col;
+    }
+
     img {
       width: 500px;
       height: auto;
@@ -32,21 +37,21 @@
       margin-top: 300px;
     }
     #books {
-      position: absolute;
-      top: 0;
-      right: 0;
+      position: inherit;
       padding: 4em;
     }
   </style>
 </head>
 
 <body>
-  <img id="picture" src="./public/IMG_0064.JPG" alt="pic">
-  <span id="blahblah">
-    Alex Diaz is a recent graduate from the University of Central Missouri with a Bachelor's Degree in Computer
-    Science.<br>He is currently searching for a role in backend development. He enjoys learning and reading as well as
-    being with friends and family.<br>
-  </span>
+  <div>
+    <img id="picture" src="./public/IMG_0064.JPG" alt="pic">
+    <span id="blahblah">
+      Alex Diaz is a recent graduate from the University of Central Missouri with a Bachelor's Degree in Computer
+      Science.<br>He is currently searching for a role in backend development. He enjoys learning and reading as well as
+      being with friends and family.<br>
+    </span>
+  </div>
 
   <div id="books">
     <a href="books.html">here is a list of books i've read</a>
