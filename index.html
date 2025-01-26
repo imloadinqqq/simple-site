@@ -26,6 +26,10 @@
         text-align: center;
       }
 
+      #container {
+        padding: 20px;
+      }
+
       #picture img {
         max-width: 100%;
         height: auto;
@@ -34,9 +38,14 @@
 
     body {
       text-align: center;
-      padding-top: 100px;
+      overflow: hidden;
+      height: 100%;
     }
-
+    #container {
+      padding: 2%;
+      box-sizing: border-box;
+      height: 100%;
+    }
     #name {
       font-size: 3.5vw;
     }
@@ -55,10 +64,6 @@
     }
     a:visited {
       color: blue;
-    }
-    footer {
-      padding-top: 100px;
-      text-align: right;
     }
   </style>
 
@@ -83,31 +88,33 @@
 </head>
 
 <body>
-  <span id="name"><i><b>ALEX DIAZ</b></i></span><br><br>
-  <span id="email"><i><b>amdiaz1313@gmail.com</b></i></span><br><br>
-  <div id="picture">
-    <img
-      src="https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_3/v1643129842/lsr7org/yjd96twj6awmjl57ab2x/LFE_09092021-79591.jpg"
-      alt="lfe">
+  <div id="container">
+    <span id="name"><i><b>ALEX DIAZ</b></i></span><br><br>
+    <span id="email"><i><b>amdiaz1313@gmail.com</b></i></span><br><br>
+    <div id="picture">
+      <img
+        src="https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_3/v1643129842/lsr7org/yjd96twj6awmjl57ab2x/LFE_09092021-79591.jpg"
+        alt="lfe">
+    </div>
+    <br><br>
+    <span id="timezone">
+      <i>
+        <a href="https://24timezones.com/usa_time/mo_jackson/lees_summit.php">Time in Lees Summit</a>
+        -
+        <span id="time">0:00 PM</span>
+        <a href="https://24timezones.com/time-zone/cst">CST</a>
+      </i>
+    </span>
+    <br><br>
+
+    <span id="list">
+      <a href="about.html">about</a> / 
+      <a href="resume.html">resume</a> / 
+      <a href="https://www.linkedin.com/in/alex-diaz-1560a928a/">linkedin</a> / 
+      <a href="https://www.inspiringquotes.com/">quotes</a>
+
+    </span>
   </div>
-  <br><br>
-  <span id="timezone">
-    <i>
-      <a href="https://24timezones.com/usa_time/mo_jackson/lees_summit.php">Time in Lees Summit</a>
-      -
-      <span id="time">0:00 PM</span>
-      <a href="https://24timezones.com/time-zone/cst">CST</a>
-    </i>
-  </span>
-  <br><br>
-
-  <span id="list">
-    <a href="about.html">about</a> / 
-    <a href="resume.html">resume</a> / 
-    <a href="https://www.linkedin.com/in/alex-diaz-1560a928a/">linkedin</a> / 
-    <a href="https://www.inspiringquotes.com/">quotes</a>
-
-  </span>
 </body>
 
 </html>
