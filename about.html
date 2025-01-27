@@ -26,20 +26,33 @@
     }
 
     img {
-      width: 500px;
+      width: 400px;
       height: auto;
     }
     #blahblah {
       margin-top: 20px;
       display: block;
       font-size: 20px;
+      font-weight: bold;
+      font-style: italic;
     }
     footer {
       margin-top: 300px;
     }
-    #books {
+    #links {
       position: inherit;
       padding: 4em;
+      font-weight: bold;
+      font-style: italic;
+    }
+    a:visited{
+      color: blue;
+    }
+    #home {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      margin: 10px;
     }
   </style>
 </head>
@@ -54,8 +67,12 @@
     </span>
   </div>
 
-  <div id="books">
-    <a href="books.html">here is a list of books i've read</a>
+  <div id="links">
+    <a href="books.html">here is a list of books i've read</a><br>
+    <a href="equipment.html">here is a list of equipment i use</a>
   </div>
+  <footer>
+    <button id="home" onclick="location.href='index.html'">Home</button>
+  </footer>
 </body>
 </html>
