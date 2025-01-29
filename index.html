@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/x-icon" href="public/favicon.ico">
   <style>
+    /* phone */
     @media (max-width: 768px) {
       #name {
         font-size: 24px;
@@ -36,6 +37,35 @@
       }
     }
 
+    /* tablets */
+    @media (min-width: 769px) and (max-width: 1024px) {
+      #name {
+        font-size: 40px;
+      }
+
+      #email {
+        font-size: 20px;
+      }
+
+      #timezone {
+        font-size: 18px;
+      }
+
+      #list a {
+        font-size: 18px;
+      }
+
+      #container {
+        padding: 30px;
+      }
+
+      #picture img {
+        max-width: 80%;
+        height: auto;
+      }
+    }
+
+    /* desktop */
     body {
       text-align: center;
       overflow: hidden;
