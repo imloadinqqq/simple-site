@@ -5,6 +5,7 @@
   <title>Resume</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="public/favicon.ico">
   <style>
     @media (max-width: 768px) {
       #resume {
@@ -15,7 +16,7 @@
         width: 100%;
       }
     }
-    body {
+    body { 
       margin: 20px;
     }
     #resume {
@@ -24,6 +25,12 @@
     img {
       max-width: 100%;
       height: auto;
+    }
+    #home {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      margin: 10px;
     }
   </style>
 </head>
@@ -34,6 +41,9 @@
   <span>
     <img id="picture" src="./public/IMG_6469.JPEG" style="width: 400px; height: auto;" alt="car">
   </span>
+  <footer>
+    <button id="home" onclick="location.href='index.html'">Home</button>
+  </footer>
 </body>
 
 </html>

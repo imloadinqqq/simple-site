@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="public/favicon.ico">
 	<title>books</title>
 
 	<style>
@@ -17,6 +18,12 @@
 		#fin, #reading {
 			padding-bottom: 2em;
 		}
+		#home {
+      position: fixed;
+      bottom: 0;
+			left: 0;
+			margin: 10px;
+    }
 	</style>
 </head>
 <body>
@@ -74,9 +81,10 @@
 			document.getElementById("finRes").textContent = "books finished: " + finCount;
 			document.getElementById("readRes").textContent = "books currently reading: " + readCount;
 		}
-</script>
+	</script>
+	<footer>
+		<button id="home" onclick="location.href='index.html'">Home</button>
+		<a href="https://www.goodreads.com/review/list/129864719?shelf=%23ALL%23">link to my goodreads :)</a>
+	</footer>
 </body>
-<footer>
-	<a href="https://www.goodreads.com/review/list/129864719?shelf=%23ALL%23">link to my goodreads :)</a>
-</footer>
 </html>
