@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="public/favicon.ico">
+  <title>Photos</title>
+  <style>
+
+    h1, h2{
+      font-weight: bold;
+      font-style: italic;
+      margin-top: 20px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+      gap: 10px;
+      padding: 30px;
+      justify-content: center;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    #home {
+      position: fixed;
+      bottom: 10px;
+      left: 10px;
+      padding: 10px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    #home:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <h1>aquí hay algunas fotos de puerto rico</h1>
+  <h2>hopefully i get to go back one day..</h2>
+
+  <div class="gallery">
+    <img src="/public/pr.jpg" alt="PR Flag">
+    <img src="public/coqui.jpg" alt="coqui">
+    <img src="public/pr2.jpg" alt="PR Flag 2">
+    <img src="public/viejo-san-juan.jpg" alt="vsj">
+    <img src="public/pr-water.jpg" alt="waterfall">
+    <img src="public/garita-old-san-juan.jpg" alt="vsj cool">
+  </div>
+
+  <footer>
+    <button id="home" onclick="location.href='index.html'">Home</button>
+  </footer>
+</body>
+</html>

@@ -22,7 +22,7 @@
 
     body {
       display: flex;
-      flex-direction: col;
+      flex-direction: row;
     }
 
     img {
@@ -50,9 +50,17 @@
     }
     #home {
       position: fixed;
-      bottom: 0;
-      left: 0;
-      margin: 10px;
+      bottom: 10px;
+      left: 10px;
+      padding: 10px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    #home:hover {
+      background-color: #0056b3;
     }
   </style>
 </head>
@@ -61,15 +69,17 @@
   <div>
     <img id="picture" src="./public/IMG_0064.JPG" alt="pic">
     <span id="blahblah">
-      Alex Diaz is a recent graduate from the University of Central Missouri with a Bachelor's Degree in Computer
-      Science.<br>He is currently searching for a role in backend development. He enjoys learning and reading as well as
+      Hey there! My name's Alex and I'm a recent graduate from the University of Central Missouri with a Bachelor's Degree in Computer
+      Science.<br>I am currently searching for a full stack developer role.<br>I enjoy learning and reading as well as
       being with friends and family.<br>
     </span>
+
   </div>
 
   <div id="links">
-    <a href="books.html">here is a list of books i've read</a><br><br>
-    <a href="equipment.html">here is a list of equipment i use</a>
+    <a href="books.html">list of books i've read/am reading</a><br><br>
+    <a href="equipment.html">list of equipment i use</a><br><br>
+    <a href="photos.html">pictures of puerto rico &#129392;</a>
   </div>
   <footer>
     <button id="home" onclick="location.href='index.html'">Home</button>
