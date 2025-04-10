@@ -2,139 +2,147 @@
 <html lang="en">
 
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/x-icon" href="public/favicon.ico">
-  <link rel="stylesheet" href="style.css">
-  <style>
-    @media (max-width: 768px) {
-      #name {
-        font-size: 24px;
-      }
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/x-icon" href="public/favicon.ico">
+	<link rel="stylesheet" href="style.css">
+	<style>
+		@media (max-width: 768px) {
+			#name {
+				font-size: 24px;
+			}
 
-      #email {
-        font-size: 14px;
-      }
+			#email {
+				font-size: 14px;
+			}
 
-      #timezone {
-        font-size: 14px;
-      }
+			#timezone {
+				font-size: 14px;
+			}
 
-      #list a {
-        display: inline;
-      }
+			#list a {
+				display: inline;
+			}
 
-      body {
-        text-align: center;
-      }
+			body {
+				text-align: center;
+			}
 
-      #container {
-        padding: 20px;
-      }
+			#container {
+				padding: 20px;
+			}
 
-      #picture img {
-        max-width: 100%;
-        height: auto;
-      }
-    }
+			#picture img {
+				max-width: 100%;
+				height: auto;
+			}
+		}
 
-    body {
-      text-align: center;
-      overflow: auto;
-      height: 100%;
-    }
-    #container {
-      padding: 1%;
-      box-sizing: border-box;
-      height: 100%;
-    }
-    #name {
-      font-size: 60px;
-    }
-    #email {
-      font-size: 25px;
-      text-decoration: underline;
-      color: black;
-    }
-    #picture img {
-      max-width: 50%;
-      height: auto;
-    }
-    #timezone {
-      font-size: 20px;
-    }
-    #list a {
-      font-size: 20px;
-    }
-    a:visited {
-      color: blue;
-    }
-    .icon {
-      width: 30px;
-      height: 30px;
-      object-fit: contain;
-      padding-left: 5px;
-      padding-right: 5px;
-    }
-  </style>
+		body {
+			text-align: center;
+			overflow: auto;
+			height: 100%;
+		}
 
-  <title>ALEX DIAZ</title>
-  <script type="text/javascript">
-    // time zone formatting
-    let options = {
-      timeZone: 'US/Central',
-      hour: 'numeric',
-      minute: 'numeric',
-      second: 'numeric',
-    },
-      timeFormatter = new Intl.DateTimeFormat([], options);
+		#container {
+			padding: 1%;
+			box-sizing: border-box;
+			height: 100%;
+		}
 
-    // set time
-    setInterval(
-      () => {
-        document.querySelector("#time").innerText = timeFormatter.format(new Date());
-      }
-      , 1000)
-  </script>
+		#name {
+			font-size: 60px;
+		}
+
+		#email {
+			font-size: 25px;
+			text-decoration: underline;
+			color: black;
+		}
+
+		#picture img {
+			max-width: 50%;
+			height: auto;
+		}
+
+		#timezone {
+			font-size: 20px;
+		}
+
+		#list a {
+			font-size: 20px;
+		}
+
+		a:visited {
+			color: blue;
+		}
+
+		.icon {
+			width: 30px;
+			height: 30px;
+			object-fit: contain;
+			padding-left: 5px;
+			padding-right: 5px;
+		}
+	</style>
+
+	<title>ALEX DIAZ</title>
+	<script type="text/javascript">
+		// time zone formatting
+		let options = {
+			timeZone: 'US/Central',
+			hour: 'numeric',
+			minute: 'numeric',
+			second: 'numeric',
+		},
+			timeFormatter = new Intl.DateTimeFormat([], options);
+
+		// set time
+		setInterval(
+			() => {
+				document.querySelector("#time").innerText = timeFormatter.format(new Date());
+			}
+			, 1000)
+	</script>
 </head>
 
 <body>
-  <div id="container">
-    <span id="name"><i><b>ALEX DIAZ</b></i></span><br><br>
-    <a href="mailto:amdiaz1313@gmail.com" id="email"><i><b>amdiaz1313@gmail.com</b></i></a><br><br>
-    <div id="picture">
-      <img
-        src="https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_3/v1643129842/lsr7org/yjd96twj6awmjl57ab2x/LFE_09092021-79591.jpg"
-        alt="lfe">
-    </div>
-    <br><br>
-    <span id="timezone">
-      <i>
-        <a href="https://24timezones.com/usa_time/mo_jackson/lees_summit.php">Time in Lees Summit</a>
-        -
-        <span id="time">0:00 PM</span>
-        <a href="https://24timezones.com/time-zone/cst">CST</a>
-      </i>
-    </span>
-    <br><br>
+	<div id="container">
+		<span id="name"><i><b>ALEX DIAZ</b></i></span><br><br>
+		<a href="mailto:amdiaz1313@gmail.com" id="email"><i><b>amdiaz1313@gmail.com</b></i></a><br><br>
+		<div id="picture">
+			<img
+				src="https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_3/v1643129842/lsr7org/yjd96twj6awmjl57ab2x/LFE_09092021-79591.jpg"
+				alt="lfe">
+		</div>
+		<br><br>
+		<span id="timezone">
+			<i>
+				<a href="https://24timezones.com/usa_time/mo_jackson/lees_summit.php">Time in Lees Summit</a>
+				-
+				<span id="time">0:00 PM</span>
+				<a href="https://24timezones.com/time-zone/cst">CST</a>
+			</i>
+		</span>
+		<br><br>
 
-    <span id="list">
-      <a href="about.html">about</a> /
-      <a href="resume.html">resume</a> /
-      <a href="blog.html">blog</a> /
-      <a href="https://www.inspiringquotes.com/">quotes</a>
-    </span><br><br>
-    <span id="socials">
-      <a href="https://discord.com/users/308089208634081280" target="_blank">
-          <img class="icon" src="./public/icons/discord-mark-black.png" alt="discord"></a>
-      <a href="https://www.linkedin.com/in/alex-diaz-1560a928a/" target="_blank">
-          <img class="icon" src="./public/icons/LI-In-Bug.png" alt="linkedin"></a>
-      <a href="https://github.com/imloadinqqq" target="_blank">
-          <img class="icon" src="./public/icons/github-mark.png" alt="github"></a>
-    </span>
-  </div>
+		<span id="list">
+			<a href="about.html">about</a> /
+			<a href="resume.html">resume</a> /
+			<a href="projects.html">projects</a> /
+			<a href="https://www.inspiringquotes.com/">quotes</a>
+		</span><br><br>
+		<span id="socials">
+			<a href="https://discord.com/users/308089208634081280" target="_blank">
+				<img class="icon" src="./public/icons/discord-mark-black.png" alt="discord"></a>
+			<a href="https://www.linkedin.com/in/alex-diaz-1560a928a/" target="_blank">
+				<img class="icon" src="./public/icons/LI-In-Bug.png" alt="linkedin"></a>
+			<a href="https://github.com/imloadinqqq" target="_blank">
+				<img class="icon" src="./public/icons/github-mark.png" alt="github"></a>
+		</span>
+	</div>
 </body>
 <footer>
-  <p id="copyright">Alex Diaz &copy; 2025</p>
+	<p id="copyright">Alex Diaz &copy; 2025</p>
 </footer>
 
 </html>
