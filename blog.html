@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>blog</title>
+	<style>
+		.btnContainer {
+			margin-left: 25px;
+		}
+
+		.filterDiv {
+			display: none;
+			margin-left: 25px;
+		}
+
+		.filterDiv.show {
+			margin-top: 10px;
+			display: block;
+			margin-left: 25px;
+		}
+
+		.btn.active {
+			background-color: #666;
+			color: white;
+		}
+
+		.post {
+			border: solid;
+			height: fit-content;
+			width: 70%;
+			padding: 10px;
+		}
+
+		.post p {
+			text-wrap: inherit;
+		}
+
+		.post h3 {
+			margin-bottom: -20px;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Welcome to my blog!</h1>
+	<div class="btnContainer" id="btnContainer">
+		<button class="btn active" onclick="filter('all')">Show All Posts</button>
+		<button class="btn" onclick="filter('sports')">Sports</button>
+		<button class="btn" onclick="filter('software')">Software</button>
+	</div>
+	<div class="container">
+		<div class="filterDiv sports">
+			<div class="post">
+				<h3>New York Knicks Lose Game 5 at Home</h3><br>
+				<p>Alex Diaz / April 30, 2025</p>
+				<p>Last night, the New York Knicks lost to the Detroit Pistons 106-103.<br>
+					Both teams came out aggressive, but also inefficient with both teams shooting 40% in the first half.<br>
+					The game ended with a clutch shot by OG Anunoby to cut the lead to 1, but it was too late as they had to play
+					the foul game against the Pistons.<br>
+					Despite this, the Knicks still lead the series 3-2 and will go back to Detroit for Game 6 on Thursday.<br><br>
+					<b>Good luck to my Knicks!!!</b>
+				</p>
+				<a href="https://www.nba.com/game/det-vs-nyk-0042400125/box-score#box-score">Link to Game 5 box score</a>
+			</div>
+		</div>
+	</div>
+</body>
+
+<script>
+	filter('all');
+
+	function filter(c) {
+		var x = document.getElementsByClassName("filterDiv");
+		if (c == "all") c = "";
+		for (var i = 0; i < x.length; i++) {
+			removeElements(x[i], "show");
+			if (x[i].className.indexOf(c) > -1) addElements(x[i], "show");
+		}
+	}
+
+	function addElements(element, name) {
+		var arr1 = element.className.split(" ");
+		var arr2 = name.split(" ");
+		for (var i = 0; i < arr2.length; i++) {
+			if (arr1.indexOf(arr2[i]) == -1) {
+				element.className += " " + arr2[i];
+			}
+		}
+	}
+
+	function removeElements(element, name) {
+		var arr1 = element.className.split(" ");
+		var arr2 = name.split(" ");
+		for (var i = 0; i < arr2.length; i++) {
+			while (arr1.indexOf(arr2[i]) > -1) {
+				arr1.splice(arr1.indexOf(arr2[i]), 1);
+			}
+		}
+		element.className = arr1.join(" ");
+	}
+
+	var btnContainer = document.getElementById("btnContainer");
+	var btns = btnContainer.getElementsByClassName("btn");
+	for (var i = 0; i < btns.length; i++) {
+		btns[i].addEventListener("click", function () {
+			var current = document.getElementsByClassName("active");
+			if (current.length > 0) {
+				current[0].className = current[0].className.replace(" active", "");
+			}
+			this.className += " active";
+		});
+	}
+</script>
+
+</html>

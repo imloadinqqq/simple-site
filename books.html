@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/x-icon" href="public/favicon.ico">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/x-icon" href="public/favicon.ico">
 	<link rel="stylesheet" href="style.css">
 	<title>books</title>
 
 	<style>
-		td,th {
+		td,
+		th {
 			text-align: left;
 			padding-right: 2em;
 			padding-top: 5px;
@@ -16,11 +18,13 @@
 			padding-left: 5px;
 		}
 
-		#fin, #reading {
+		#fin,
+		#reading {
 			padding-bottom: 2em;
 		}
 	</style>
 </head>
+
 <body>
 	<div id="fin">
 		<table border="true" style="border: 1px;"><b>Finished 2025</b>
@@ -38,6 +42,14 @@
 				<td>The False Prince</td>
 				<td>Jennifer A. Nielsen</td>
 			</tr>
+			<tr>
+				<td>The Ruthless Elimination of Hurry</td>
+				<td>John Mark Comer</td>
+			</tr>
+			<tr>
+				<td>The Runaway King</td>
+				<td>Jennifer A. Nielsen</td>
+			</tr>
 		</table>
 	</div>
 	<div id="reading">
@@ -45,20 +57,12 @@
 			<th>Book</th>
 			<th>Author</th>
 			<tr>
-				<td>The Ruthless Elimination of Hurry</td>
-				<td>John Mark Comer</td>
-			</tr>
-			<tr>
 				<td>New York</td>
 				<td>Mark Rutherford</td>
 			</tr>
 			<tr>
 				<td>A Gentleman in Moscow</td>
 				<td>Amor Towles</td>
-			</tr>
-			<tr>
-				<td>The Runaway King</td>
-				<td>Jennifer A. Nielsen</td>
 			</tr>
 			<tr>
 				<td>Puerto Rico: A National History</td>
@@ -72,11 +76,11 @@
 		window.onload = function () {
 			// get number of books for fin
 			var finTable = document.querySelector("#fin table");
-			var finCount = finTable.rows.length-1;
+			var finCount = finTable.rows.length - 1;
 
 			// books for currently reading
 			var readTable = document.querySelector("#reading table");
-			var readCount = readTable.rows.length-1;
+			var readCount = readTable.rows.length - 1;
 
 			document.getElementById("finRes").textContent = "books finished: " + finCount;
 			document.getElementById("readRes").textContent = "books currently reading: " + readCount;
@@ -84,8 +88,9 @@
 	</script>
 	<footer>
 		<button id="home" onclick="location.href='index.html'">Home</button>
-		<a href="https://www.goodreads.com/review/list/129864719?shelf=%23ALL%23">link to my goodreads :)</a>
+		<a href="https://www.goodreads.com/review/list/129864719?shelf=%23ALL%23">link to my goodreads</a>
 		<p id="copyright">Alex Diaz &copy; 2025</p>
 	</footer>
 </body>
+
 </html>
